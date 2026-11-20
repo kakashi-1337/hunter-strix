@@ -1,7 +1,7 @@
 {
   "env": {
     "STRIX_LLM": "openai/abliterated-model-large-v2",
-    "LLM_API_KEY": "ak__8uN0VJflN3gApIdniGp07eFaJGXzlGUdj38FAXi3JY",
+    "LLM_API_KEY": " ",
     "LLM_API_BASE": "https://api.abliteration.ai/v1",
     "STRIX_CONTEXT_FALLBACK_TOKENS": "1000000"
   }
