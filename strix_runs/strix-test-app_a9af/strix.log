@@ -1,0 +1,1159 @@
+2026-11-13 15:53:37.222 INFO    strix-test-app_a9af - strix.core.runner: Starting Strix scan strix-test-app_a9af (image=ghcr.io/usestrix/strix-sandbox:1.3.0, max_turns=500, interactive=False, run_dir=/home/dave/hunter-strix/strix_runs/strix-test-app_a9af)
+2026-11-13 15:53:37.223 INFO    strix-test-app_a9af - strix.config.models: OpenAI API route for openai/abliterated-model-large-v2: chat_completions
+2026-11-13 15:53:37.223 INFO    strix-test-app_a9af - strix.core.runner: LLM model resolved: openai/abliterated-model-large-v2
+2026-11-13 15:53:37.225 INFO    strix-test-app_a9af - strix.core.runner: Bringing up sandbox session for scan strix-test-app_a9af
+2026-11-13 15:53:37.226 DEBUG   strix-test-app_a9af - strix.runtime.backends: Selected sandbox backend: docker
+2026-11-13 15:53:37.228 INFO    strix-test-app_a9af - strix.runtime.session_manager: Creating sandbox session for scan strix-test-app_a9af (backend=docker, image=ghcr.io/usestrix/strix-sandbox:1.3.0)
+2026-11-13 15:53:37.371 DEBUG   strix-test-app_a9af - strix.runtime.docker_client: Creating sandbox container: image=ghcr.io/usestrix/strix-sandbox:1.3.0 caps=['NET_ADMIN', 'NET_RAW'] exposed_ports=[48080]
+2026-11-13 15:53:42.247 INFO    strix-test-app_a9af - strix.runtime.docker_client: Sandbox container created: id=0b4c30c59131 image=ghcr.io/usestrix/strix-sandbox:1.3.0
+2026-11-13 15:53:42.660 DEBUG   strix-test-app_a9af - strix.runtime.session_manager: Caido host endpoint resolved: http://127.0.0.1:32768
+2026-11-13 15:53:42.662 INFO    strix-test-app_a9af - strix.runtime.session_manager: Sandbox session for scan strix-test-app_a9af ready and cached
+2026-11-13 15:53:42.662 INFO    strix-test-app_a9af - strix.core.runner: Sandbox ready for scan strix-test-app_a9af
+2026-11-13 15:53:42.723 WARNING strix-test-app_a9af - strix.tools.mcp.loader: MCP config at config/strix-mcp.json is not a JSON list; ignoring it
+2026-11-13 15:53:42.765 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: scan_modes/deep -> deep
+2026-11-13 15:53:42.766 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: tooling/agent_browser -> agent_browser
+2026-11-13 15:53:42.766 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: tooling/python -> python
+2026-11-13 15:53:42.767 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/counterevidence -> counterevidence
+2026-11-13 15:53:42.768 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/severity_calibration -> severity_calibration
+2026-11-13 15:53:42.768 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: coordination/root_agent -> root_agent
+2026-11-13 15:53:42.768 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: coordination/source_aware_whitebox -> source_aware_whitebox
+2026-11-13 15:53:42.768 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: custom/source_aware_sast -> source_aware_sast
+2026-11-13 15:53:42.769 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/source_aware_discovery -> source_aware_discovery
+2026-11-13 15:53:42.769 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/fix_verification -> fix_verification
+2026-11-13 15:53:42.769 DEBUG   strix-test-app_a9af - strix.skills: load_skills: 10 skill(s) resolved
+2026-11-13 15:53:42.894 DEBUG   strix-test-app_a9af - strix.agents.prompt: render_system_prompt: scan_mode=deep root=True whitebox=True skills=10 prompt_len=134379
+2026-11-13 15:53:42.917 INFO    strix-test-app_a9af - strix.agents.factory: Built root agent 'Root Agent' (skills=0, tools=44, scan_mode=deep, whitebox=True)
+2026-11-13 15:53:42.949 INFO    strix-test-app_a9af - strix.core.agents: agent.register 725f218b (Root Agent) parent=-
+2026-11-13 15:53:43.150 INFO    strix-test-app_a9af - strix.runtime.caido_bootstrap: Bootstrapping Caido client (host=http://127.0.0.1:32768, container=http://127.0.0.1:48080)
+2026-11-13 15:53:43.211 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating trace
+2026-11-13 15:53:43.236 DEBUG   strix-test-app_a9af - openai.agents: Setting current trace: no-op
+2026-11-13 15:53:43.237 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:43.241 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 1/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:53:43.332 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:43.332 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 1, current_agent=Root Agent
+2026-11-13 15:53:43.333 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:43.353 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:53:43.356 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:43.365 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:53:45.284 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 2/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:53:49.319 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 3/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:53:50.488 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=0a506d20-760f-43fb-9043-6f7dda7b65d5 response_id=- stream=1 duration_ms=7119 ttft_ms=6414 req_bytes=264310 res_bytes=1893 finish=- in=61219 out=238 cached=0 cost=- agent=725f218b attempt=0
+2026-11-13 15:53:50.747 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 1 gap(s))
+2026-11-13 15:53:50.747 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:53:50.747 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:53:50.753 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:53:50.758 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:53:50.759 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:53:50.766 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:50.767 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool get_threat_model
+2026-11-13 15:53:50.788 DEBUG   strix-test-app_a9af - openai.agents: Tool get_threat_model completed.
+2026-11-13 15:53:50.805 DEBUG   strix-test-app_a9af - openai.agents: Turn 1 complete, next_step type=NextStepRunAgain
+2026-11-13 15:53:50.833 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 2, current_agent=Root Agent
+2026-11-13 15:53:50.833 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:50.834 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:53:50.836 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:50.837 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:53:53.539 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=845e5591-fafd-40a5-89e5-d29df5f7cc81 response_id=- stream=1 duration_ms=2704 ttft_ms=2521 req_bytes=266327 res_bytes=773 finish=- in=61353 out=59 cached=61120 cost=- agent=725f218b attempt=0
+2026-11-13 15:53:53.542 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 1 gap(s))
+2026-11-13 15:53:53.542 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:53:53.543 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:53:53.543 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:53:53.543 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:53.682 DEBUG   strix-test-app_a9af - openai.agents: Turn 2 complete, next_step type=NextStepRunAgain
+2026-11-13 15:53:53.716 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 3, current_agent=Root Agent
+2026-11-13 15:53:53.716 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:53.717 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:53:53.719 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:53.724 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:53:55.360 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 4/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:53:56.686 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=eba1435d-9235-42b0-98e5-5460b44077e6 response_id=- stream=1 duration_ms=2968 ttft_ms=2867 req_bytes=267468 res_bytes=720 finish=- in=61651 out=35 cached=61312 cost=- agent=725f218b attempt=0
+2026-11-13 15:53:56.689 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 1 gap(s))
+2026-11-13 15:53:56.689 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:53:56.689 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:53:56.690 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:53:56.690 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:53:56.784 DEBUG   strix-test-app_a9af - openai.agents: Turn 3 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:00.413 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 4, current_agent=Root Agent
+2026-11-13 15:54:00.413 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:00.414 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:00.416 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:00.417 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:03.392 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 5/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:54:11.432 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 6/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:54:14.446 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=45993271-4a1a-4618-a9b7-3fe117108530 response_id=- stream=1 duration_ms=14031 ttft_ms=2343 req_bytes=268948 res_bytes=9777 finish=- in=61983 out=1955 cached=61568 cost=- agent=725f218b attempt=0
+2026-11-13 15:54:14.449 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 1 gap(s))
+2026-11-13 15:54:14.449 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:14.450 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:14.450 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:54:14.450 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:54:14.450 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:14.450 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:14.450 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool save_threat_model
+2026-11-13 15:54:14.457 DEBUG   strix-test-app_a9af - openai.agents: Tool save_threat_model completed.
+2026-11-13 15:54:14.457 DEBUG   strix-test-app_a9af - openai.agents: Turn 4 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:14.469 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 5, current_agent=Root Agent
+2026-11-13 15:54:14.469 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:14.469 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:14.471 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:14.473 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:19.103 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=27a1ca77-ba18-4507-a6d4-af92dc012559 response_id=- stream=1 duration_ms=4633 ttft_ms=2668 req_bytes=278686 res_bytes=2008 finish=- in=62768 out=314 cached=61888 cost=- agent=725f218b attempt=0
+2026-11-13 15:54:19.106 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 1 gap(s))
+2026-11-13 15:54:19.106 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:19.106 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:19.107 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:19.107 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:19.107 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool create_agent
+2026-11-13 15:54:19.109 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: custom/source_aware_sast -> source_aware_sast
+2026-11-13 15:54:19.109 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: scan_modes/deep -> deep
+2026-11-13 15:54:19.110 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: tooling/agent_browser -> agent_browser
+2026-11-13 15:54:19.110 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: tooling/python -> python
+2026-11-13 15:54:19.110 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/counterevidence -> counterevidence
+2026-11-13 15:54:19.110 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/severity_calibration -> severity_calibration
+2026-11-13 15:54:19.110 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: coordination/source_aware_whitebox -> source_aware_whitebox
+2026-11-13 15:54:19.111 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/source_aware_discovery -> source_aware_discovery
+2026-11-13 15:54:19.111 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/fix_verification -> fix_verification
+2026-11-13 15:54:19.111 DEBUG   strix-test-app_a9af - strix.skills: load_skills: 9 skill(s) resolved
+2026-11-13 15:54:19.118 DEBUG   strix-test-app_a9af - strix.agents.prompt: render_system_prompt: scan_mode=deep root=False whitebox=True skills=9 prompt_len=126901
+2026-11-13 15:54:19.119 INFO    strix-test-app_a9af - strix.agents.factory: Built child agent 'Static Triage Agent' (skills=1, tools=44, scan_mode=deep, whitebox=True)
+2026-11-13 15:54:19.119 INFO    strix-test-app_a9af - strix.core.agents: agent.register 0bd57703 (Static Triage Agent) parent=725f218b
+2026-11-13 15:54:19.120 INFO    strix-test-app_a9af - strix.tools.agents_graph.tools: create_agent: spawned 0bd57703 (Static Triage Agent) parent=725f218b skills=1 task_len=1255
+2026-11-13 15:54:19.120 DEBUG   strix-test-app_a9af - openai.agents: Tool create_agent completed.
+2026-11-13 15:54:19.120 DEBUG   strix-test-app_a9af - openai.agents: Turn 5 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:19.137 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 6, current_agent=Root Agent
+2026-11-13 15:54:19.137 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:19.138 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:19.140 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:23.775 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:23.978 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:23.981 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:23.982 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 1, current_agent=Static Triage Agent
+2026-11-13 15:54:23.982 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:23.982 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:23.984 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:23.985 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:24.046 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 7/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:54:29.145 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=d911de0a-dc13-4b89-9a43-e06cac47074c response_id=- stream=1 duration_ms=5162 ttft_ms=4266 req_bytes=252801 res_bytes=1970 finish=- in=58860 out=268 cached=24448 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:54:29.148 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 1 gap(s))
+2026-11-13 15:54:29.149 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:29.149 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:29.149 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:54:29.149 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:54:29.149 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:29.150 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:29.150 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool get_threat_model
+2026-11-13 15:54:29.150 DEBUG   strix-test-app_a9af - openai.agents: Tool get_threat_model completed.
+2026-11-13 15:54:29.151 DEBUG   strix-test-app_a9af - openai.agents: Turn 1 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:29.159 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 2, current_agent=Static Triage Agent
+2026-11-13 15:54:29.159 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:29.160 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:29.162 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:29.163 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:30.156 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=9e08e3b0-9a9c-4a92-80c3-a7a1e0834fe7 response_id=- stream=1 duration_ms=11016 ttft_ms=8898 req_bytes=280594 res_bytes=2332 finish=- in=63146 out=399 cached=62976 cost=- agent=725f218b attempt=0
+2026-11-13 15:54:30.158 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 1 gap(s))
+2026-11-13 15:54:30.158 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:30.159 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:30.159 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:30.160 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:30.160 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool create_agent
+2026-11-13 15:54:30.161 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: vulnerabilities/rce -> rce
+2026-11-13 15:54:30.162 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: scan_modes/deep -> deep
+2026-11-13 15:54:30.162 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: tooling/agent_browser -> agent_browser
+2026-11-13 15:54:30.162 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: tooling/python -> python
+2026-11-13 15:54:30.162 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/counterevidence -> counterevidence
+2026-11-13 15:54:30.162 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/severity_calibration -> severity_calibration
+2026-11-13 15:54:30.163 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: coordination/source_aware_whitebox -> source_aware_whitebox
+2026-11-13 15:54:30.163 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: custom/source_aware_sast -> source_aware_sast
+2026-11-13 15:54:30.163 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/source_aware_discovery -> source_aware_discovery
+2026-11-13 15:54:30.163 DEBUG   strix-test-app_a9af - strix.skills: Loaded skill: analysis/fix_verification -> fix_verification
+2026-11-13 15:54:30.163 DEBUG   strix-test-app_a9af - strix.skills: load_skills: 10 skill(s) resolved
+2026-11-13 15:54:30.171 DEBUG   strix-test-app_a9af - strix.agents.prompt: render_system_prompt: scan_mode=deep root=False whitebox=True skills=10 prompt_len=135291
+2026-11-13 15:54:30.171 INFO    strix-test-app_a9af - strix.agents.factory: Built child agent 'RCE Validation Agent' (skills=1, tools=44, scan_mode=deep, whitebox=True)
+2026-11-13 15:54:30.171 INFO    strix-test-app_a9af - strix.core.agents: agent.register 88d38966 (RCE Validation Agent) parent=725f218b
+2026-11-13 15:54:30.172 INFO    strix-test-app_a9af - strix.tools.agents_graph.tools: create_agent: spawned 88d38966 (RCE Validation Agent) parent=725f218b skills=1 task_len=1553
+2026-11-13 15:54:30.172 DEBUG   strix-test-app_a9af - openai.agents: Tool create_agent completed.
+2026-11-13 15:54:30.172 DEBUG   strix-test-app_a9af - openai.agents: Turn 6 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:30.191 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 7, current_agent=Root Agent
+2026-11-13 15:54:30.191 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:30.192 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:30.194 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:30.196 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:30.208 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:30.212 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:30.212 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 1, current_agent=RCE Validation Agent
+2026-11-13 15:54:30.212 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:30.212 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:30.214 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:30.215 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:32.086 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 8/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:54:32.494 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=02e49051-7625-4bc7-9d38-42419f984cf0 response_id=- stream=1 duration_ms=3334 ttft_ms=2764 req_bytes=257436 res_bytes=1660 finish=- in=59606 out=157 cached=58752 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:54:32.497 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:32.497 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:32.497 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:32.498 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:54:32.498 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:54:32.498 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:32.498 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:32.606 DEBUG   strix-test-app_a9af - openai.agents: Turn 2 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:32.653 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 3, current_agent=Static Triage Agent
+2026-11-13 15:54:32.653 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:32.653 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:32.655 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:32.656 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:33.721 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=3fee2342-6338-4471-9277-717cfb8e6680 response_id=- stream=1 duration_ms=3528 ttft_ms=3023 req_bytes=282828 res_bytes=1491 finish=- in=63609 out=95 cached=63424 cost=- agent=725f218b attempt=0
+2026-11-13 15:54:33.973 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:33.973 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:33.974 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:33.974 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:54:33.974 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:54:33.974 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:33.974 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:33.974 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool wait_for_agents
+2026-11-13 15:54:33.975 INFO    strix-test-app_a9af - strix.core.agents: agent.status 725f218b=waiting
+2026-11-13 15:54:37.495 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=91fba5ea-bc60-49c2-8c48-be24f1d81bcc response_id=- stream=1 duration_ms=7282 ttft_ms=6678 req_bytes=261767 res_bytes=1635 finish=- in=61035 out=161 cached=0 cost=- agent=88d38966 attempt=0
+2026-11-13 15:54:37.497 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:37.498 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:37.498 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:37.498 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:54:37.498 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:54:37.498 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:37.498 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:37.499 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool get_threat_model
+2026-11-13 15:54:37.499 DEBUG   strix-test-app_a9af - openai.agents: Tool get_threat_model completed.
+2026-11-13 15:54:37.499 DEBUG   strix-test-app_a9af - openai.agents: Turn 1 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:37.520 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 2, current_agent=RCE Validation Agent
+2026-11-13 15:54:37.520 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:37.520 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:37.522 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:37.523 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:38.093 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=57f085e3-f056-4d85-8ab5-85659dcac8a8 response_id=- stream=1 duration_ms=5439 ttft_ms=3063 req_bytes=260253 res_bytes=3811 finish=- in=60168 out=622 cached=59520 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:54:38.096 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:38.096 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:38.097 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:38.097 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:54:38.097 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:54:38.097 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:38.097 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:38.097 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool create_todo
+2026-11-13 15:54:38.098 DEBUG   strix-test-app_a9af - openai.agents: Tool create_todo completed.
+2026-11-13 15:54:38.098 DEBUG   strix-test-app_a9af - openai.agents: Turn 3 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:38.112 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 4, current_agent=Static Triage Agent
+2026-11-13 15:54:38.112 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:38.113 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:38.114 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:38.115 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:40.126 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 9/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:54:40.173 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=c1c551a8-b5db-4942-9683-c440f57b2c33 response_id=- stream=1 duration_ms=2652 ttft_ms=2370 req_bytes=266072 res_bytes=1431 finish=- in=61776 out=89 cached=60928 cost=- agent=88d38966 attempt=0
+2026-11-13 15:54:40.175 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:40.176 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:40.176 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:40.176 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:54:40.176 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:54:40.176 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:40.177 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:40.239 DEBUG   strix-test-app_a9af - openai.agents: Turn 2 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:40.259 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 3, current_agent=RCE Validation Agent
+2026-11-13 15:54:40.259 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:40.259 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:40.261 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:40.263 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:43.874 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=4142857f-7caf-45b7-915a-206452a9228a response_id=- stream=1 duration_ms=3614 ttft_ms=3500 req_bytes=268656 res_bytes=713 finish=- in=62297 out=40 cached=61696 cost=- agent=88d38966 attempt=0
+2026-11-13 15:54:43.876 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:43.877 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:43.877 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:43.877 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:43.878 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:46.183 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=461bf72e-c420-4031-9eaf-72229edb7542 response_id=- stream=1 duration_ms=8070 ttft_ms=4322 req_bytes=267229 res_bytes=2752 finish=- in=61614 out=483 cached=60096 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:54:46.186 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:46.186 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:46.187 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:46.187 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:46.187 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:46.187 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool think
+2026-11-13 15:54:46.187 DEBUG   strix-test-app_a9af - openai.agents: Tool think completed.
+2026-11-13 15:54:46.188 DEBUG   strix-test-app_a9af - openai.agents: Turn 4 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:46.212 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 5, current_agent=Static Triage Agent
+2026-11-13 15:54:46.212 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:46.212 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:46.214 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:46.215 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:46.881 DEBUG   strix-test-app_a9af - openai.agents: Turn 3 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:48.158 DEBUG   strix-test-app_a9af - strix.runtime.caido_bootstrap: loginAsGuest attempt 10/10 failed: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:54:50.470 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=19bbea30-e4a3-45ba-9bac-82d117bd93a5 response_id=- stream=1 duration_ms=4257 ttft_ms=4252 req_bytes=269745 res_bytes=1309 finish=- in=62113 out=118 cached=62016 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:54:50.473 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:50.473 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:50.473 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:50.474 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:54:50.474 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:50.474 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:50.484 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 4, current_agent=RCE Validation Agent
+2026-11-13 15:54:50.484 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:50.485 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:50.487 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:50.489 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:50.541 DEBUG   strix-test-app_a9af - openai.agents: Turn 5 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:50.548 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 6, current_agent=Static Triage Agent
+2026-11-13 15:54:50.548 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:50.549 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:50.551 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:50.552 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:53.397 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=1102c687-b74c-4323-b10f-1b0dc476075c response_id=- stream=1 duration_ms=2911 ttft_ms=2689 req_bytes=269957 res_bytes=856 finish=- in=62583 out=104 cached=62272 cost=- agent=88d38966 attempt=0
+2026-11-13 15:54:53.400 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:53.401 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:53.401 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:53.401 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:53.402 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:53.509 DEBUG   strix-test-app_a9af - openai.agents: Turn 4 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:53.519 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 5, current_agent=RCE Validation Agent
+2026-11-13 15:54:53.520 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:53.520 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:53.522 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:53.523 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:54.580 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=1df9abd2-5bdc-4f14-8d9d-eee413a81575 response_id=- stream=1 duration_ms=4030 ttft_ms=3843 req_bytes=270983 res_bytes=724 finish=- in=62291 out=44 cached=62144 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:54:54.582 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:54.583 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:54.583 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:54.584 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:54.584 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:54.584 DEBUG   strix-test-app_a9af - openai.agents: Turn 6 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:54.604 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 7, current_agent=Static Triage Agent
+2026-11-13 15:54:54.604 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:54.605 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:54.606 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:54.608 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:56.289 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=65403c3e-04c3-435b-bb88-7897a7437cba response_id=- stream=1 duration_ms=2768 ttft_ms=2063 req_bytes=270993 res_bytes=1580 finish=- in=62867 out=217 cached=62592 cost=- agent=88d38966 attempt=0
+2026-11-13 15:54:56.291 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:56.292 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:56.292 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:56.293 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:54:56.293 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:56.293 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:56.893 DEBUG   strix-test-app_a9af - openai.agents: Turn 5 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:56.907 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 6, current_agent=RCE Validation Agent
+2026-11-13 15:54:56.908 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:56.908 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:56.910 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:56.912 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:54:57.523 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=858979c3-be69-4db5-b12e-ad577ac81f5a response_id=- stream=1 duration_ms=2917 ttft_ms=2916 req_bytes=271520 res_bytes=699 finish=- in=62366 out=35 cached=62208 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:54:57.525 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:54:57.526 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:54:57.526 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:54:57.526 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:54:57.527 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:57.597 DEBUG   strix-test-app_a9af - openai.agents: Turn 7 complete, next_step type=NextStepRunAgain
+2026-11-13 15:54:57.609 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 8, current_agent=Static Triage Agent
+2026-11-13 15:54:57.609 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:57.610 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:54:57.611 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:54:57.613 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:00.978 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=e97dd7ce-5724-40ca-972f-cc0a53491105 response_id=- stream=1 duration_ms=3367 ttft_ms=2485 req_bytes=272378 res_bytes=1728 finish=- in=62587 out=157 cached=62336 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:55:00.980 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:00.981 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:00.981 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:00.981 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:00.982 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:00.982 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:00.982 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:01.124 DEBUG   strix-test-app_a9af - openai.agents: Turn 8 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:01.473 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 9, current_agent=Static Triage Agent
+2026-11-13 15:55:01.473 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:01.474 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:01.476 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:01.478 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:04.452 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=559f1f1b-95bc-4847-8738-6244a91fdda0 response_id=- stream=1 duration_ms=7543 ttft_ms=2367 req_bytes=273633 res_bytes=4795 finish=- in=63643 out=905 cached=62976 cost=- agent=88d38966 attempt=0
+2026-11-13 15:55:04.454 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:04.455 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:04.455 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:04.455 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:04.456 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:04.456 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:04.456 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:04.529 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=c08eb551-871e-49ba-8bb1-17b1df7f5331 response_id=- stream=1 duration_ms=3054 ttft_ms=2734 req_bytes=274029 res_bytes=1249 finish=- in=62738 out=106 cached=62464 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:55:04.619 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:04.620 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:04.620 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:04.621 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:04.621 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:04.622 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:04.622 DEBUG   strix-test-app_a9af - openai.agents: Turn 6 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:04.662 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 7, current_agent=RCE Validation Agent
+2026-11-13 15:55:04.662 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:04.663 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:04.665 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:04.667 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:04.697 DEBUG   strix-test-app_a9af - openai.agents: Turn 9 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:04.834 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 10, current_agent=Static Triage Agent
+2026-11-13 15:55:04.834 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:04.835 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:04.837 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:04.839 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:07.158 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=725ff58e-fb32-4797-a3d2-d4db85302530 response_id=- stream=1 duration_ms=2322 ttft_ms=2043 req_bytes=275168 res_bytes=781 finish=- in=62904 out=65 cached=62720 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:55:07.162 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:07.162 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:07.163 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:07.163 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:07.164 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:07.237 DEBUG   strix-test-app_a9af - openai.agents: Turn 10 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:07.273 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 11, current_agent=Static Triage Agent
+2026-11-13 15:55:07.273 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:07.274 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:07.276 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:07.278 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:12.786 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=13f117f9-6eba-4d6d-9f2c-796652c3f190 response_id=- stream=1 duration_ms=5510 ttft_ms=4228 req_bytes=275932 res_bytes=2054 finish=- in=63058 out=282 cached=62848 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:55:12.790 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:12.791 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:12.791 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:12.792 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:12.792 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:12.792 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:12.792 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:13.609 DEBUG   strix-test-app_a9af - openai.agents: Turn 11 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:13.628 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 12, current_agent=Static Triage Agent
+2026-11-13 15:55:13.629 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:13.629 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:13.631 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:13.632 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:14.561 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=3c9807eb-7144-4c5f-86d0-7fa86c673d56 response_id=- stream=1 duration_ms=9897 ttft_ms=2796 req_bytes=278577 res_bytes=6772 finish=- in=63886 out=1645 cached=63552 cost=- agent=88d38966 attempt=0
+2026-11-13 15:55:14.563 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:14.564 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:14.564 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:14.565 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:14.565 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:14.565 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:14.565 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:14.663 DEBUG   strix-test-app_a9af - openai.agents: Turn 7 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:14.684 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 8, current_agent=RCE Validation Agent
+2026-11-13 15:55:14.684 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:14.685 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:14.687 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:14.688 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:16.094 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=f3c20788-72bc-4b45-94b1-fbe740a20493 response_id=- stream=1 duration_ms=2464 ttft_ms=1972 req_bytes=278270 res_bytes=1312 finish=- in=63327 out=129 cached=62976 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:55:16.097 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:16.097 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:16.097 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:16.098 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:16.098 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:16.098 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:16.171 DEBUG   strix-test-app_a9af - openai.agents: Turn 12 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:16.191 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 13, current_agent=Static Triage Agent
+2026-11-13 15:55:16.191 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:16.192 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:16.194 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:16.195 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:18.287 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=1650f6ca-cfcc-4b19-b5d4-7e6585c647f1 response_id=- stream=1 duration_ms=3601 ttft_ms=2772 req_bytes=286637 res_bytes=2023 finish=- in=64901 out=232 cached=63808 cost=- agent=88d38966 attempt=0
+2026-11-13 15:55:18.290 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:18.291 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:18.292 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:18.292 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:18.292 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:18.292 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:18.292 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:18.293 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool list_requests
+2026-11-13 15:55:18.293 WARNING strix-test-app_a9af - strix.tools.proxy.tools: Caido bootstrap failed; proxy tools unavailable
+Traceback (most recent call last):
+  File "strix/tools/proxy/tools.py", line 58, in _ctx_client
+  File "strix/runtime/caido_handle.py", line 42, in get
+  File "strix/runtime/caido_bootstrap.py", line 96, in bootstrap_caido
+  File "strix/runtime/caido_bootstrap.py", line 78, in _login_as_guest
+RuntimeError: loginAsGuest failed after 10 attempts: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:55:18.296 DEBUG   strix-test-app_a9af - openai.agents: Tool list_requests completed.
+2026-11-13 15:55:18.296 DEBUG   strix-test-app_a9af - openai.agents: Turn 8 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:18.301 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 9, current_agent=RCE Validation Agent
+2026-11-13 15:55:18.301 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:18.302 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:18.304 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:18.305 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:19.049 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=b87b6fe2-25f3-4d05-8d7c-12021cf8bd02 response_id=- stream=1 duration_ms=2857 ttft_ms=2403 req_bytes=279504 res_bytes=936 finish=- in=63515 out=114 cached=63360 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:55:19.052 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:19.052 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:19.053 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:19.053 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:19.053 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:22.274 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=9e87d7c7-05d2-4bd9-8d54-56b93565237a response_id=- stream=1 duration_ms=3971 ttft_ms=3056 req_bytes=288445 res_bytes=2206 finish=- in=64994 out=272 cached=64832 cost=- agent=88d38966 attempt=0
+2026-11-13 15:55:22.277 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:22.278 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:22.278 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:22.279 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:22.279 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:22.279 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:22.279 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:22.779 DEBUG   strix-test-app_a9af - openai.agents: Turn 9 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:23.092 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 10, current_agent=RCE Validation Agent
+2026-11-13 15:55:23.092 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:23.093 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:23.095 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:23.097 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:26.297 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=de5a697a-10db-4c8e-8229-9fe9ffbbb41f response_id=- stream=1 duration_ms=3204 ttft_ms=2579 req_bytes=290823 res_bytes=1528 finish=- in=65368 out=233 cached=64896 cost=- agent=88d38966 attempt=0
+2026-11-13 15:55:26.300 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:26.300 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:26.301 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:26.301 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:26.301 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:26.897 DEBUG   strix-test-app_a9af - openai.agents: Turn 10 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:26.904 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 11, current_agent=RCE Validation Agent
+2026-11-13 15:55:26.904 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:26.905 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:26.907 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:26.908 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:29.794 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=b3a0e157-3859-44c5-acc1-63186fe36fa1 response_id=- stream=1 duration_ms=2888 ttft_ms=2375 req_bytes=295521 res_bytes=1541 finish=- in=66509 out=117 cached=65536 cost=- agent=88d38966 attempt=0
+2026-11-13 15:55:29.798 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:29.798 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:29.799 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:29.799 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:29.799 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:29.799 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:29.800 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:35.293 DEBUG   strix-test-app_a9af - openai.agents: Turn 11 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:35.300 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 12, current_agent=RCE Validation Agent
+2026-11-13 15:55:35.300 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:35.301 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:35.303 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:35.304 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:38.929 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=f903d1d0-aa58-41af-8a29-1862cd036301 response_id=- stream=1 duration_ms=3628 ttft_ms=2778 req_bytes=300231 res_bytes=1843 finish=- in=67481 out=211 cached=66432 cost=- agent=88d38966 attempt=0
+2026-11-13 15:55:38.932 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:38.932 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:38.933 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:38.933 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:38.933 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:38.933 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:38.933 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:39.075 DEBUG   strix-test-app_a9af - openai.agents: Turn 12 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:39.081 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 13, current_agent=RCE Validation Agent
+2026-11-13 15:55:39.081 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:39.082 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:39.084 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:39.085 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:43.937 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=ba6f8b9c-bc6f-41fa-a26b-dbb4c2dc34e4 response_id=- stream=1 duration_ms=4854 ttft_ms=2422 req_bytes=302298 res_bytes=3082 finish=- in=67812 out=459 cached=67392 cost=- agent=88d38966 attempt=0
+2026-11-13 15:55:43.940 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:43.940 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:43.940 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:43.941 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:43.941 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:43.941 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:43.941 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:44.015 DEBUG   strix-test-app_a9af - openai.agents: Turn 13 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:44.021 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 14, current_agent=RCE Validation Agent
+2026-11-13 15:55:44.021 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:44.022 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:44.024 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:44.025 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:49.057 DEBUG   strix-test-app_a9af - openai.agents: Turn 13 complete, next_step type=NextStepRunAgain
+2026-11-13 15:55:49.066 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 14, current_agent=Static Triage Agent
+2026-11-13 15:55:49.066 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:49.066 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:55:49.068 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:49.070 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:55:49.573 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=7b6cb4b4-f1b2-486e-a430-a6313b079ccc response_id=- stream=1 duration_ms=5550 ttft_ms=3187 req_bytes=309539 res_bytes=2308 finish=- in=68920 out=391 cached=67712 cost=- agent=88d38966 attempt=0
+2026-11-13 15:55:49.576 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:49.576 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:49.577 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:49.577 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:55:49.577 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:49.577 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:55:51.286 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=d8593734-1e90-4fe3-bd6b-9d0249a1fe64 response_id=- stream=1 duration_ms=2219 ttft_ms=1919 req_bytes=280534 res_bytes=1034 finish=- in=63746 out=50 cached=63552 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:55:51.289 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:55:51.289 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:55:51.290 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:55:51.290 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:55:51.290 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:55:51.291 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:00.060 DEBUG   strix-test-app_a9af - openai.agents: Turn 14 complete, next_step type=NextStepRunAgain
+2026-11-13 15:56:00.063 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 15, current_agent=RCE Validation Agent
+2026-11-13 15:56:00.064 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:00.064 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:56:00.066 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:00.068 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:56:08.080 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=40c5b07f-b248-4557-bb44-05327363927a response_id=- stream=1 duration_ms=8015 ttft_ms=3281 req_bytes=312017 res_bytes=4518 finish=- in=69224 out=792 cached=68800 cost=- agent=88d38966 attempt=0
+2026-11-13 15:56:08.083 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:56:08.084 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:56:08.084 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:56:08.085 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:56:08.085 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:56:08.085 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:56:08.085 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:21.292 DEBUG   strix-test-app_a9af - openai.agents: Turn 14 complete, next_step type=NextStepRunAgain
+2026-11-13 15:56:21.310 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 15, current_agent=Static Triage Agent
+2026-11-13 15:56:21.310 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:21.311 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:56:21.312 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:21.314 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:56:25.127 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=3d06ac2e-4001-457a-afc5-110aa96b03ac response_id=- stream=1 duration_ms=3815 ttft_ms=3757 req_bytes=281372 res_bytes=665 finish=- in=63830 out=30 cached=63680 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:56:25.130 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:56:25.131 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:56:25.132 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:56:25.132 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:56:25.133 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:38.089 DEBUG   strix-test-app_a9af - openai.agents: Turn 15 complete, next_step type=NextStepRunAgain
+2026-11-13 15:56:38.113 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 16, current_agent=RCE Validation Agent
+2026-11-13 15:56:38.113 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:38.114 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:56:38.117 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:38.118 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:56:38.422 DEBUG   strix-test-app_a9af - openai.agents: Turn 15 complete, next_step type=NextStepRunAgain
+2026-11-13 15:56:38.429 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 16, current_agent=Static Triage Agent
+2026-11-13 15:56:38.429 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:38.430 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:56:38.432 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:38.433 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:56:40.313 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=75a20c16-0b05-401d-abba-5200a34cd689 response_id=- stream=1 duration_ms=2197 ttft_ms=2098 req_bytes=316948 res_bytes=665 finish=- in=69674 out=30 cached=69120 cost=- agent=88d38966 attempt=0
+2026-11-13 15:56:40.316 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:56:40.317 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:56:40.318 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:56:40.318 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:56:40.318 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:41.898 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=1a4be77b-a4b0-4bda-93ac-f663e9957461 response_id=- stream=1 duration_ms=3467 ttft_ms=2945 req_bytes=282054 res_bytes=1234 finish=- in=63968 out=113 cached=63744 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:56:41.902 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:56:41.902 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:56:41.903 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:56:41.904 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:56:41.904 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:56:41.904 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:48.634 DEBUG   strix-test-app_a9af - openai.agents: Turn 16 complete, next_step type=NextStepRunAgain
+2026-11-13 15:56:48.640 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 17, current_agent=RCE Validation Agent
+2026-11-13 15:56:48.640 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:48.640 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:56:48.643 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:48.644 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:56:55.417 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=64723d8b-0c75-403e-b461-d1379c67572c response_id=- stream=1 duration_ms=6775 ttft_ms=5041 req_bytes=317558 res_bytes=2369 finish=- in=69775 out=301 cached=69632 cost=- agent=88d38966 attempt=0
+2026-11-13 15:56:55.420 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:56:55.420 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:56:55.421 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:56:55.421 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:56:55.421 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:56:55.421 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:56:55.421 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:55.500 DEBUG   strix-test-app_a9af - openai.agents: Turn 17 complete, next_step type=NextStepRunAgain
+2026-11-13 15:56:55.506 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 18, current_agent=RCE Validation Agent
+2026-11-13 15:56:55.506 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:55.507 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:56:55.509 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:56:55.510 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:56:59.959 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=46c1f443-3c7f-45fa-8393-4d1200ffb279 response_id=- stream=1 duration_ms=4451 ttft_ms=3197 req_bytes=320054 res_bytes=1558 finish=- in=70035 out=192 cached=69696 cost=- agent=88d38966 attempt=0
+2026-11-13 15:56:59.962 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:56:59.963 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:56:59.963 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:56:59.964 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:56:59.964 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:56:59.964 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:00.034 DEBUG   strix-test-app_a9af - openai.agents: Turn 18 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:00.039 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 19, current_agent=RCE Validation Agent
+2026-11-13 15:57:00.039 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:00.040 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:00.041 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:00.043 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:02.913 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=64b5fabd-5501-4bd4-9cf5-3f643774c628 response_id=- stream=1 duration_ms=2872 ttft_ms=2280 req_bytes=322337 res_bytes=1210 finish=- in=70535 out=160 cached=69952 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:02.915 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:02.916 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:02.916 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:02.917 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:02.917 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:03.007 DEBUG   strix-test-app_a9af - openai.agents: Turn 19 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:03.011 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 20, current_agent=RCE Validation Agent
+2026-11-13 15:57:03.011 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:03.012 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:03.014 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:03.016 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:07.060 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=7a702cde-9ff8-4b3c-8488-ca525ccd9789 response_id=- stream=1 duration_ms=4047 ttft_ms=3272 req_bytes=323518 res_bytes=1340 finish=- in=70773 out=193 cached=70592 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:07.063 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:07.063 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:07.064 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:07.064 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:07.065 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:07.147 DEBUG   strix-test-app_a9af - openai.agents: Turn 20 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:07.157 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 21, current_agent=RCE Validation Agent
+2026-11-13 15:57:07.157 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:07.158 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:07.160 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:07.161 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:10.913 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=ae6b88ca-9983-4aa1-9578-5c547882913c response_id=- stream=1 duration_ms=3754 ttft_ms=2431 req_bytes=325117 res_bytes=1693 finish=- in=71115 out=222 cached=70848 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:10.917 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:10.918 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:10.919 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:10.919 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:57:10.919 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:10.920 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:11.360 DEBUG   strix-test-app_a9af - openai.agents: Turn 21 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:11.366 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 22, current_agent=RCE Validation Agent
+2026-11-13 15:57:11.366 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:11.367 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:11.370 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:11.372 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:11.908 DEBUG   strix-test-app_a9af - openai.agents: Turn 16 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:11.930 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 17, current_agent=Static Triage Agent
+2026-11-13 15:57:11.930 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:11.931 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:11.933 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:11.934 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:14.429 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=0e4ac7f8-9225-4025-874c-89ab5ae6138d response_id=- stream=1 duration_ms=2497 ttft_ms=2447 req_bytes=283279 res_bytes=665 finish=- in=64170 out=30 cached=64000 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:57:14.432 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:14.432 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:14.433 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:14.434 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:14.434 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:15.530 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=e6f0af95-0ac8-43ba-9e38-3375dd29ac3a response_id=- stream=1 duration_ms=4161 ttft_ms=2649 req_bytes=326643 res_bytes=2306 finish=- in=71331 out=292 cached=71040 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:15.532 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:15.533 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:15.533 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:15.534 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:57:15.534 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:57:15.534 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:15.534 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:15.535 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool list_requests
+2026-11-13 15:57:15.535 WARNING strix-test-app_a9af - strix.tools.proxy.tools: Caido bootstrap failed; proxy tools unavailable
+Traceback (most recent call last):
+  File "strix/tools/proxy/tools.py", line 58, in _ctx_client
+  File "strix/runtime/caido_handle.py", line 42, in get
+RuntimeError: loginAsGuest failed after 10 attempts: curl exit 7: curl: (7) Failed to connect to 127.0.0.1 port 48080 after 0 ms: Could not connect to server
+
+2026-11-13 15:57:15.535 DEBUG   strix-test-app_a9af - openai.agents: Tool list_requests completed.
+2026-11-13 15:57:15.535 DEBUG   strix-test-app_a9af - openai.agents: Turn 22 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:15.553 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 23, current_agent=RCE Validation Agent
+2026-11-13 15:57:15.553 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:15.554 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:15.556 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:15.557 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:21.878 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=110d42fa-a32c-4408-84c9-f04e93ebbdc5 response_id=- stream=1 duration_ms=6324 ttft_ms=2913 req_bytes=328735 res_bytes=3265 finish=- in=71433 out=530 cached=71232 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:21.881 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:21.882 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:21.882 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:21.883 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:57:21.883 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:57:21.883 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:21.883 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:21.977 DEBUG   strix-test-app_a9af - openai.agents: Turn 23 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:21.983 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 24, current_agent=RCE Validation Agent
+2026-11-13 15:57:21.983 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:21.984 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:21.986 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:21.987 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:25.592 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=c80f2617-e3cd-4e03-8ec6-94771c4bf81c response_id=- stream=1 duration_ms=3607 ttft_ms=3154 req_bytes=332277 res_bytes=742 finish=- in=71826 out=49 cached=71360 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:25.595 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:25.595 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:25.596 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:25.596 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:25.597 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:25.671 DEBUG   strix-test-app_a9af - openai.agents: Turn 24 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:25.676 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 25, current_agent=RCE Validation Agent
+2026-11-13 15:57:25.676 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:25.677 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:25.678 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:25.680 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:34.519 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=e2bbc662-1ecc-4a27-8a1e-541cd8540c63 response_id=- stream=1 duration_ms=8842 ttft_ms=3458 req_bytes=332963 res_bytes=4661 finish=- in=71939 out=961 cached=71808 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:34.522 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:34.523 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:34.524 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:34.524 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:57:34.524 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:57:34.524 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:34.524 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:35.002 DEBUG   strix-test-app_a9af - openai.agents: Turn 25 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:35.015 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 26, current_agent=RCE Validation Agent
+2026-11-13 15:57:35.015 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:35.016 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:35.018 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:35.020 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:37.748 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=3b5688b2-28b5-4292-bb15-a798300b19a6 response_id=- stream=1 duration_ms=2731 ttft_ms=2435 req_bytes=337363 res_bytes=1045 finish=- in=72074 out=53 cached=71872 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:37.751 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:37.752 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:37.752 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:37.753 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:57:37.753 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:37.753 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:37.899 DEBUG   strix-test-app_a9af - openai.agents: Turn 26 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:37.903 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 27, current_agent=RCE Validation Agent
+2026-11-13 15:57:37.903 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:37.904 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:37.906 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:37.907 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:42.013 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=e4b32a1d-b781-4b8d-a460-a40f7433f0f6 response_id=- stream=1 duration_ms=4108 ttft_ms=3998 req_bytes=338204 res_bytes=713 finish=- in=72160 out=40 cached=72000 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:42.016 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:42.017 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:42.018 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:42.019 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:42.019 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:44.436 DEBUG   strix-test-app_a9af - openai.agents: Turn 17 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:44.442 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 18, current_agent=Static Triage Agent
+2026-11-13 15:57:44.442 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:44.443 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:44.445 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:44.447 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:45.024 DEBUG   strix-test-app_a9af - openai.agents: Turn 27 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:45.033 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 28, current_agent=RCE Validation Agent
+2026-11-13 15:57:45.033 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:45.034 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:45.036 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:45.037 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:47.487 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=d67770e1-0ff4-4db0-84df-b037b2af5a3a response_id=- stream=1 duration_ms=3043 ttft_ms=2982 req_bytes=283749 res_bytes=666 finish=- in=64236 out=30 cached=64128 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:57:47.491 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:47.492 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:47.493 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:47.493 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:47.494 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:48.755 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=814b9b68-ea12-44c1-bab0-dcdd49b4c16c response_id=- stream=1 duration_ms=3720 ttft_ms=2481 req_bytes=338741 res_bytes=2082 finish=- in=72244 out=495 cached=72128 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:48.760 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:48.761 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:48.762 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:48.763 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:48.763 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:48.917 DEBUG   strix-test-app_a9af - openai.agents: Turn 28 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:48.923 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 29, current_agent=RCE Validation Agent
+2026-11-13 15:57:48.923 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:48.924 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:48.927 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:48.929 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:57:59.086 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=f3701b90-4228-4b50-9614-c1369b2ea92e response_id=- stream=1 duration_ms=10161 ttft_ms=3419 req_bytes=342277 res_bytes=5430 finish=- in=73378 out=1086 cached=72640 cost=- agent=88d38966 attempt=0
+2026-11-13 15:57:59.089 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:57:59.089 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:57:59.090 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:57:59.091 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:57:59.091 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:57:59.091 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:57:59.091 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:59.178 DEBUG   strix-test-app_a9af - openai.agents: Turn 29 complete, next_step type=NextStepRunAgain
+2026-11-13 15:57:59.186 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 30, current_agent=RCE Validation Agent
+2026-11-13 15:57:59.186 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:59.187 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:57:59.189 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:57:59.191 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:58:00.529 DEBUG   strix-test-app_a9af - openai.agents: Turn 18 complete, next_step type=NextStepRunAgain
+2026-11-13 15:58:00.536 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 19, current_agent=Static Triage Agent
+2026-11-13 15:58:00.536 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:00.537 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:58:00.539 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:00.540 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:58:03.947 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=2de8a4b7-c09b-40da-ac4b-a29079f22c9c response_id=- stream=1 duration_ms=4759 ttft_ms=3159 req_bytes=347866 res_bytes=2386 finish=- in=73720 out=376 cached=73280 cost=- agent=88d38966 attempt=0
+2026-11-13 15:58:03.950 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:58:03.950 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:58:03.951 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:58:03.952 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:58:03.952 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:58:03.952 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:58:03.952 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:04.045 DEBUG   strix-test-app_a9af - openai.agents: Turn 30 complete, next_step type=NextStepRunAgain
+2026-11-13 15:58:04.050 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 31, current_agent=RCE Validation Agent
+2026-11-13 15:58:04.050 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:04.051 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:58:04.053 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:04.055 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:58:05.301 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=431d468d-9335-4f96-9289-208b49f2bc6a response_id=- stream=1 duration_ms=4763 ttft_ms=2977 req_bytes=284483 res_bytes=2453 finish=- in=64389 out=346 cached=64192 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:58:05.305 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:58:05.306 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:58:05.307 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:58:05.307 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:58:05.307 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:58:05.307 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:58:05.308 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:11.783 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=38183058-f60f-46a7-9c18-4138b3e499e9 response_id=- stream=1 duration_ms=7731 ttft_ms=2652 req_bytes=351453 res_bytes=4133 finish=- in=74447 out=747 cached=73600 cost=- agent=88d38966 attempt=0
+2026-11-13 15:58:11.786 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:58:11.787 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:58:11.788 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:58:11.788 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:58:11.788 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:58:11.788 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:58:11.789 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:11.930 DEBUG   strix-test-app_a9af - openai.agents: Turn 31 complete, next_step type=NextStepRunAgain
+2026-11-13 15:58:11.970 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 32, current_agent=RCE Validation Agent
+2026-11-13 15:58:11.970 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:11.971 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:58:11.974 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:11.975 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:58:16.529 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=b6aaf49b-e113-44f9-9397-3b060576bb01 response_id=- stream=1 duration_ms=4556 ttft_ms=2469 req_bytes=355996 res_bytes=3440 finish=- in=74902 out=631 cached=74368 cost=- agent=88d38966 attempt=0
+2026-11-13 15:58:16.533 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:58:16.533 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:58:16.535 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:58:16.535 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:58:16.535 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:58:16.535 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:58:16.536 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:16.652 DEBUG   strix-test-app_a9af - openai.agents: Turn 32 complete, next_step type=NextStepRunAgain
+2026-11-13 15:58:16.661 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 33, current_agent=RCE Validation Agent
+2026-11-13 15:58:16.661 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:16.663 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:58:16.666 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:16.668 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:58:35.313 DEBUG   strix-test-app_a9af - openai.agents: Turn 19 complete, next_step type=NextStepRunAgain
+2026-11-13 15:58:35.319 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 20, current_agent=Static Triage Agent
+2026-11-13 15:58:35.319 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:35.320 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:58:35.322 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:58:35.324 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:58:37.786 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=f29b8dff-1e15-4fa3-80e8-94acbd03f511 response_id=- stream=1 duration_ms=2465 ttft_ms=2298 req_bytes=286753 res_bytes=664 finish=- in=64503 out=30 cached=64320 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:58:37.791 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:58:37.792 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:58:37.793 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:58:37.793 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:58:37.793 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:07.795 DEBUG   strix-test-app_a9af - openai.agents: Turn 20 complete, next_step type=NextStepRunAgain
+2026-11-13 15:59:07.802 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 21, current_agent=Static Triage Agent
+2026-11-13 15:59:07.802 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:07.803 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:59:07.804 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:07.806 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:59:10.421 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=d49829de-4f2f-459b-af78-72376409b7e6 response_id=- stream=1 duration_ms=2617 ttft_ms=2162 req_bytes=287220 res_bytes=664 finish=- in=64569 out=30 cached=63488 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:59:10.424 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:59:10.425 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:59:10.426 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:59:10.426 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:59:10.427 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:27.112 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=0e095487-8fd8-4344-b96e-427f9cfeb896 response_id=- stream=1 duration_ms=70448 ttft_ms=2549 req_bytes=359976 res_bytes=37945 finish=- in=75215 out=8956 cached=74816 cost=- agent=88d38966 attempt=0
+2026-11-13 15:59:27.115 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:59:27.115 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:59:27.116 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:59:27.117 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:59:27.117 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:59:27.117 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:59:27.117 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:27.186 DEBUG   strix-test-app_a9af - openai.agents: Turn 33 complete, next_step type=NextStepRunAgain
+2026-11-13 15:59:27.191 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 34, current_agent=RCE Validation Agent
+2026-11-13 15:59:27.191 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:27.192 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:59:27.194 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:27.196 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:59:34.975 DEBUG   strix-test-app_a9af - openai.agents: Turn 7 complete, next_step type=NextStepRunAgain
+2026-11-13 15:59:34.983 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 8, current_agent=Root Agent
+2026-11-13 15:59:34.983 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:34.984 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:59:34.985 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:34.987 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:59:37.601 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=676691fe-a314-40da-b74c-6e5fe15f5a3c response_id=- stream=1 duration_ms=2617 ttft_ms=2517 req_bytes=284079 res_bytes=604 finish=- in=63680 out=7 cached=63488 cost=- agent=725f218b attempt=0
+2026-11-13 15:59:37.604 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:59:37.604 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:59:37.605 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:59:37.605 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:59:37.606 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:37.606 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool view_agent_graph
+2026-11-13 15:59:37.606 DEBUG   strix-test-app_a9af - openai.agents: Tool view_agent_graph completed.
+2026-11-13 15:59:37.607 DEBUG   strix-test-app_a9af - openai.agents: Turn 8 complete, next_step type=NextStepRunAgain
+2026-11-13 15:59:37.612 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 9, current_agent=Root Agent
+2026-11-13 15:59:37.612 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:37.613 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:59:37.614 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:37.615 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:59:40.428 DEBUG   strix-test-app_a9af - openai.agents: Turn 21 complete, next_step type=NextStepRunAgain
+2026-11-13 15:59:40.436 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 22, current_agent=Static Triage Agent
+2026-11-13 15:59:40.436 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:40.437 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:59:40.439 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:40.440 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:59:40.547 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=e4790a2a-bf84-4b4f-9b10-0882911a755c response_id=- stream=1 duration_ms=2933 ttft_ms=2252 req_bytes=284726 res_bytes=1054 finish=- in=63804 out=44 cached=63616 cost=- agent=725f218b attempt=0
+2026-11-13 15:59:40.550 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:59:40.551 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:59:40.552 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:59:40.552 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:59:40.552 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:59:40.553 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:40.553 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool wait_for_agents
+2026-11-13 15:59:40.553 INFO    strix-test-app_a9af - strix.core.agents: agent.status 725f218b=waiting
+2026-11-13 15:59:43.348 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=9db9c6df-092f-4310-b783-40fdb19d5ccb response_id=- stream=1 duration_ms=2910 ttft_ms=2556 req_bytes=287687 res_bytes=665 finish=- in=64634 out=30 cached=64512 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:59:43.351 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:59:43.351 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:59:43.352 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:59:43.352 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:59:43.353 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:43.569 DEBUG   strix-test-app_a9af - openai.agents: Turn 22 complete, next_step type=NextStepRunAgain
+2026-11-13 15:59:43.573 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 23, current_agent=Static Triage Agent
+2026-11-13 15:59:43.573 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:43.574 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:59:43.576 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:43.578 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 15:59:48.043 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=efc76fcd-5209-4a8f-84ee-a94dd4942cb7 response_id=- stream=1 duration_ms=4468 ttft_ms=2365 req_bytes=288153 res_bytes=1254 finish=- in=64701 out=117 cached=64576 cost=- agent=0bd57703 attempt=0
+2026-11-13 15:59:48.046 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:59:48.046 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:59:48.047 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:59:48.047 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:59:48.047 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:59:48.048 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:55.283 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=0d1509e8-5388-461e-9f17-97a54cb1e945 response_id=- stream=1 duration_ms=28090 ttft_ms=3914 req_bytes=397923 res_bytes=19809 finish=- in=75380 out=4576 cached=75136 cost=- agent=88d38966 attempt=0
+2026-11-13 15:59:55.286 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:59:55.286 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (0 results)
+2026-11-13 15:59:55.287 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:59:55.288 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 15:59:55.288 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 15:59:55.288 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 15:59:55.288 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:55.288 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool create_vulnerability_report
+2026-11-13 15:59:55.298 INFO    strix-test-app_a9af - strix.report.state: Added vulnerability report: vuln-0001 - OS Command Injection in POST /api/ping host parameter
+2026-11-13 15:59:56.267 DEBUG   strix-test-app_a9af - strix.telemetry.posthog: posthog event sent: finding_reported
+2026-11-13 15:59:57.377 DEBUG   strix-test-app_a9af - strix.telemetry.scarf: scarf event sent: finding_reported
+2026-11-13 15:59:57.380 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 15:59:57.382 INFO    strix-test-app_a9af - strix.report.writer: Saved 1 new vulnerability report(s) to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities
+2026-11-13 15:59:57.382 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 15:59:57.383 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 15:59:57.384 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 15:59:57.384 INFO    strix-test-app_a9af - strix.tools.reporting.tool: Vulnerability report created: id=vuln-0001 severity=critical cvss=9.8 title=OS Command Injection in POST /api/ping host parameter
+2026-11-13 15:59:57.384 DEBUG   strix-test-app_a9af - openai.agents: Tool create_vulnerability_report completed.
+2026-11-13 15:59:57.384 DEBUG   strix-test-app_a9af - openai.agents: Turn 34 complete, next_step type=NextStepRunAgain
+2026-11-13 15:59:57.390 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 35, current_agent=RCE Validation Agent
+2026-11-13 15:59:57.390 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:57.391 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 15:59:57.394 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 15:59:57.395 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:00:01.734 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=7c59666f-167c-4603-97d2-9fb143ceb205 response_id=- stream=1 duration_ms=4342 ttft_ms=3510 req_bytes=417652 res_bytes=1537 finish=- in=78132 out=155 cached=75264 cost=- agent=88d38966 attempt=0
+2026-11-13 16:00:01.737 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (0 surface(s), 3 gap(s))
+2026-11-13 16:00:01.737 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:00:01.738 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:00:01.739 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:00:01.739 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 16:00:01.739 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:00:01.739 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:01.740 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool record_coverage
+2026-11-13 16:00:01.740 INFO    strix-test-app_a9af - strix.tools.coverage.tools: Coverage recorded: id=f65f21 outcome=reported surface=POST /api/ping (server.js:8-13, host parameter)
+2026-11-13 16:00:01.740 DEBUG   strix-test-app_a9af - openai.agents: Tool record_coverage completed.
+2026-11-13 16:00:01.740 DEBUG   strix-test-app_a9af - openai.agents: Turn 35 complete, next_step type=NextStepRunAgain
+2026-11-13 16:00:01.922 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 36, current_agent=RCE Validation Agent
+2026-11-13 16:00:01.922 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:01.923 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:00:01.926 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:01.928 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:00:09.142 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=6af66746-6272-4a97-942a-1b5716ed1c6d response_id=- stream=1 duration_ms=7217 ttft_ms=2047 req_bytes=419071 res_bytes=4938 finish=- in=78340 out=943 cached=78208 cost=- agent=88d38966 attempt=0
+2026-11-13 16:00:09.144 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:00:09.145 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:00:09.145 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:00:09.146 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:00:09.147 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 16:00:09.147 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 16:00:09.147 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:00:09.147 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:09.147 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool agent_finish
+2026-11-13 16:00:09.148 INFO    strix-test-app_a9af - strix.core.agents: agent.status 88d38966=completed
+2026-11-13 16:00:09.148 INFO    strix-test-app_a9af - strix.tools.agents_graph.tools: agent_finish: 88d38966 success=True findings=3 filed_reports=1 parent_notified=True
+2026-11-13 16:00:09.148 DEBUG   strix-test-app_a9af - openai.agents: Tool agent_finish completed.
+2026-11-13 16:00:09.149 DEBUG   strix-test-app_a9af - openai.agents: Turn 36 complete, next_step type=NextStepFinalOutput
+2026-11-13 16:00:09.155 DEBUG   strix-test-app_a9af - openai.agents: Tool wait_for_agents completed.
+2026-11-13 16:00:09.155 DEBUG   strix-test-app_a9af - openai.agents: Turn 9 complete, next_step type=NextStepRunAgain
+2026-11-13 16:00:09.160 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 10, current_agent=Root Agent
+2026-11-13 16:00:09.160 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:09.160 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:00:09.162 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:09.163 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:00:14.400 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=6c219824-2791-49ac-a070-8065f67b785d response_id=- stream=1 duration_ms=5239 ttft_ms=3856 req_bytes=290495 res_bytes=1637 finish=- in=65102 out=134 cached=63488 cost=- agent=725f218b attempt=0
+2026-11-13 16:00:14.404 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:00:14.405 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:00:14.406 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:00:14.407 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:00:14.407 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 16:00:14.407 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 16:00:14.407 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:00:14.408 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:14.408 DEBUG   strix-test-app_a9af - openai.agents: Invoking tool wait_for_agents
+2026-11-13 16:00:14.408 INFO    strix-test-app_a9af - strix.core.agents: agent.status 725f218b=waiting
+2026-11-13 16:00:18.051 DEBUG   strix-test-app_a9af - openai.agents: Turn 23 complete, next_step type=NextStepRunAgain
+2026-11-13 16:00:18.060 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 24, current_agent=Static Triage Agent
+2026-11-13 16:00:18.061 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:18.061 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:00:18.063 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:18.065 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:00:21.176 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=cc808571-2ff4-4898-952d-7d4d49c7861a response_id=- stream=1 duration_ms=3114 ttft_ms=2605 req_bytes=289210 res_bytes=665 finish=- in=64854 out=30 cached=64512 cost=- agent=0bd57703 attempt=0
+2026-11-13 16:00:21.179 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:00:21.179 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:00:21.180 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:00:21.181 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:00:21.181 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:00:21.182 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:51.183 DEBUG   strix-test-app_a9af - openai.agents: Turn 24 complete, next_step type=NextStepRunAgain
+2026-11-13 16:00:51.192 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 25, current_agent=Static Triage Agent
+2026-11-13 16:00:51.192 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:51.193 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:00:51.195 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:00:51.197 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:00:55.641 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=18c857e3-e90a-4ea9-8466-319733e82379 response_id=- stream=1 duration_ms=4447 ttft_ms=3634 req_bytes=289680 res_bytes=666 finish=- in=64918 out=30 cached=64512 cost=- agent=0bd57703 attempt=0
+2026-11-13 16:00:55.644 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:00:55.644 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:00:55.645 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:00:55.649 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:00:55.650 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:00:55.651 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:01:25.652 DEBUG   strix-test-app_a9af - openai.agents: Turn 25 complete, next_step type=NextStepRunAgain
+2026-11-13 16:01:25.661 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 26, current_agent=Static Triage Agent
+2026-11-13 16:01:25.661 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:01:25.662 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:01:25.664 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:01:25.666 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:01:29.078 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=9629c560-c74d-42b3-90b4-1ac1eea342dc response_id=- stream=1 duration_ms=3415 ttft_ms=3025 req_bytes=290150 res_bytes=666 finish=- in=64982 out=30 cached=64512 cost=- agent=0bd57703 attempt=0
+2026-11-13 16:01:29.082 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:01:29.082 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:01:29.083 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:01:29.084 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:01:29.084 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:01:29.085 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:01:59.086 DEBUG   strix-test-app_a9af - openai.agents: Turn 26 complete, next_step type=NextStepRunAgain
+2026-11-13 16:01:59.097 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 27, current_agent=Static Triage Agent
+2026-11-13 16:01:59.097 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:01:59.098 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:01:59.100 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:01:59.101 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:02:01.683 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=44f5f3f8-3219-4fed-a387-a41b465e8256 response_id=- stream=1 duration_ms=2585 ttft_ms=2091 req_bytes=290620 res_bytes=666 finish=- in=65048 out=30 cached=64896 cost=- agent=0bd57703 attempt=0
+2026-11-13 16:02:01.687 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:02:01.688 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:02:01.688 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:02:01.689 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:02:01.690 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:02:01.690 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:02:31.692 DEBUG   strix-test-app_a9af - openai.agents: Turn 27 complete, next_step type=NextStepRunAgain
+2026-11-13 16:02:31.702 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 28, current_agent=Static Triage Agent
+2026-11-13 16:02:31.702 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:02:31.703 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:02:31.705 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:02:31.706 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:02:34.498 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=33ee7a40-91bd-4e79-bdf1-ff97f99f71cb response_id=- stream=1 duration_ms=2794 ttft_ms=2192 req_bytes=291090 res_bytes=665 finish=- in=65114 out=30 cached=64960 cost=- agent=0bd57703 attempt=0
+2026-11-13 16:02:34.509 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:02:34.509 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:02:34.509 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:02:34.510 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:02:34.511 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:02:34.511 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:03:01.439 DEBUG   strix-test-app_a9af - openai.agents: Turn 28 complete, next_step type=NextStepRunAgain
+2026-11-13 16:03:01.444 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 29, current_agent=Static Triage Agent
+2026-11-13 16:03:01.444 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:03:01.445 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:03:01.447 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:03:01.448 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:03:05.495 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=ce6244aa-131b-4b92-aa45-cc27daf20f7d response_id=- stream=1 duration_ms=4049 ttft_ms=2155 req_bytes=291549 res_bytes=1057 finish=- in=65177 out=133 cached=65024 cost=- agent=0bd57703 attempt=0
+2026-11-13 16:03:05.498 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:03:05.498 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:03:05.498 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:03:05.499 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:03:05.500 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:03:05.500 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:03:05.580 DEBUG   strix-test-app_a9af - openai.agents: Turn 29 complete, next_step type=NextStepRunAgain
+2026-11-13 16:03:05.587 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 30, current_agent=Static Triage Agent
+2026-11-13 16:03:05.587 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:03:05.588 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:03:05.590 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:03:05.592 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:03:12.635 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=4dc8d9ed-16ad-4369-b93a-546f705ecace response_id=- stream=1 duration_ms=7045 ttft_ms=1886 req_bytes=292975 res_bytes=2543 finish=- in=65493 out=359 cached=65216 cost=- agent=0bd57703 attempt=0
+2026-11-13 16:03:12.637 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:03:12.638 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:03:12.638 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:03:12.639 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:03:12.640 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=reasoning class=ResponseReasoningItem
+2026-11-13 16:03:12.640 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=message class=ResponseOutputMessage
+2026-11-13 16:03:12.640 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:03:12.640 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:03:42.645 DEBUG   strix-test-app_a9af - openai.agents: Turn 30 complete, next_step type=NextStepRunAgain
+2026-11-13 16:03:42.654 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 31, current_agent=Static Triage Agent
+2026-11-13 16:03:42.654 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:03:42.655 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available for request
+2026-11-13 16:03:42.657 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:03:42.659 DEBUG   strix-test-app_a9af - openai.agents: Calling LLM
+2026-11-13 16:03:45.915 DEBUG   strix-test-app_a9af - strix.llm.request_log: llm_request route=openai provider=openai model=openai/abliterated-model-large-v2 host=api.abliteration.ai outcome=success status=200 request_id=5102640c-c97a-4221-bcd4-0f5a21e6f34b response_id=- stream=1 duration_ms=3259 ttft_ms=2986 req_bytes=295320 res_bytes=666 finish=- in=65720 out=30 cached=65408 cost=- agent=0bd57703 attempt=0
+2026-11-13 16:03:45.918 INFO    strix-test-app_a9af - strix.report.coverage: Saved coverage record to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/coverage.json (1 surface(s), 1 gap(s))
+2026-11-13 16:03:45.918 INFO    strix-test-app_a9af - strix.report.writer: Updated vulnerability index: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/vulnerabilities.csv
+2026-11-13 16:03:45.919 INFO    strix-test-app_a9af - strix.report.sarif: Wrote SARIF 2.1.0 report: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af/findings.sarif (1 results)
+2026-11-13 16:03:45.920 INFO    strix-test-app_a9af - strix.report.state: Essential scan data saved to: /home/dave/hunter-strix/strix_runs/strix-test-app_a9af
+2026-11-13 16:03:45.920 DEBUG   strix-test-app_a9af - openai.agents: Processing output item type=function_call class=ResponseFunctionToolCall
+2026-11-13 16:03:45.921 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:04:15.923 DEBUG   strix-test-app_a9af - openai.agents: Turn 31 complete, next_step type=NextStepRunAgain
+2026-11-13 16:04:15.932 DEBUG   strix-test-app_a9af - openai.agents: Starting turn 32, current_agent=Static Triage Agent
+2026-11-13 16:04:15.932 DEBUG   strix-test-app_a9af - openai.agents: Tracing is disabled. Not creating span
+2026-11-13 16:04:15.933 DEBUG   strix-test-app_a9af - openai.agents: No conversation_id available 

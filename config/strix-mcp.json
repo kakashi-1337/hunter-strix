@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "hunter-cve-database": {
+      "command": "python3",
+      "args": ["/home/dave/hunter-strix/mcps/cve-database/server.py"]
+    },
+    "hunter-exploitdb": {
+      "command": "python3",
+      "args": ["/home/dave/hunter-strix/mcps/exploitdb/server.py"]
+    },
+    "hunter-rag": {
+      "command": "python3",
+      "args": ["/home/dave/hunter-strix/mcps/rag-knowledge/server.py"]
+    },
+    "hunter-tools": {
+      "command": "python3",
+      "args": ["/home/dave/hunter-strix/mcps/hunting-tools/server.py"]
+    },
+    "hunter-camoufox": {
+      "command": "python3",
+      "args": ["/home/dave/hunter-strix/mcps/camoufox-browser/server.py"]
+    },
+    "hunter-caido": {
+      "command": "python3",
+      "args": ["/home/dave/hunter-strix/mcps/caido-proxy/server.py"]
+    },
+    "hunter-discord": {
+      "command": "python3",
+      "args": ["/home/dave/hunter-strix/mcps/discord-alerts/server.py"]
+    }
+  }
+}
